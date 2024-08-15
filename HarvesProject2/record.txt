@@ -1,0 +1,14 @@
+50dollars was withdrawn from the machine. Balance is now: 9950
+50dollars was withdrawn from the machine. Balance is now: 9950
+200dollars was withdrawn from the machine. Balance is now: 9800
+200dollars was withdrawn from the machine. Balance is now: 9600
+100dollars was withdrawn from the machine. Balance is now: 9500
+100dollars was withdrawn from the machine. Balance is now: 9400
+50dollars was withdrawn from the machine. Balance is now: 9350
+100dollars was refilled in the machine. Balance is now: 9450
+1000dollars was refilled in the machine. Balance is now: 10450
+1000 dollars was refilled in the machine. Balance is now: 11000
+200 dollars was refilled in the machine. Balance is now: 11200
+200 dollars was withdrawn from the machine. Balance is now: 11000
+100 dollars was withdrawn from the machine. Balance is now: 10900
+50 dollars was withdrawn from the machine. Balance is now: 10850

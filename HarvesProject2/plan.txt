@@ -1,0 +1,41 @@
+plan:
+classes we need:
+    user class (interface?)
+
+    account implements user 
+        login, check balance
+    
+    admin class implements user
+        only the admin can make an account, set username and password, change username and password etc
+        check balance of the ATM, not a specific account
+
+    atm class
+        withdraw
+        deposit 
+
+
+GUIS:
+First screen:
+    - label
+    - radio buttons with admin and account
+    - submit button 
+second screen:
+    - depending on what was chosen login with textfield
+        - username and password
+    - submit 
+admin screen:
+    - refill ATM button 
+        - label
+        - textfield 
+        - result label
+        - submit (go back to admin home?)
+    - check ATM balance button 
+    - logout button
+    - result label
+account screen:
+    - get balance
+    - withdraw 50
+    - withdraw 100
+    - withdraw 200
+    - logout
+    - result label 
