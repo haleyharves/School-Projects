@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Review</title>
+</head>
+<body>
+    <h1>Add New Review</h1>
+    <form action="{{ url_for('add_review') }}" method="post">
+        <label for="Title">Title:</label><br>
+        <input type="text" id="Title" name="Title" required><br>
+        <label for="DateWatched">Date Watched:</label><br>
+        <input type="date" id="DateWatched" name="DateWatched" required><br>
+        <label for="MyRating">My Rating:</label><br>
+        <input type="number" id="MyRating" name="MyRating" required><br>
+        <label for="FirstWatch">First Watch?</label><br>
+        <!-- used ChatGPT to help with drop down implementation as well as date variable implementation-->
+        <select id="FirstWatch" name="FirstWatch">
+            <option value="true">Yes</option>
+            <option value="false">No</option>
+        </select><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

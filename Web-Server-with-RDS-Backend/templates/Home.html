@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Home Page</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- display a flash message here, if necessary -->
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            {% for category, message in messages %}
+                <div class="alert alert-{{ category }}">
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+    {% endwith %}
+    <div class="container">
+        <h1 class="mt-5">Welcome to my Movie Journal!</h1>
+        <div class="mt-3">
+            <!-- Add User Button -->
+            <a href="/add-review" class="btn btn-primary">Add Review</a>
+            <!-- Delete User Button -->
+            <a href="/delete-review" class="btn btn-danger">Delete Review</a>
+            <a href="/delete-movie" class="btn btn-danger">Delete Movie</a>
+            <!-- Update User Button -->
+            <a href="/update-review" class="btn btn-secondary">Update Review</a>
+            <a href="/update-movie" class="btn btn-secondary">Update Movie</a>
+            <!-- Display All Users Button -->
+            <a href="/display-reviews" class="btn btn-info">Display All Reviews</a>
+            <a href="/display-movies" class="btn btn-info">Display All Movies</a>
+            <a href='/display-all' class="btn btn-info">Display All</a>
+        </div>
+        <p>On this page, you can add a review, update a review or a movie, delete a review or a movie, or view all reviews and movies! This webpage 
+    is run on an SQL database which holds all of my personal movie data!</p>
+    <h1>My favorite recent movie:</h1>
+     <iframe width="560" height="315" src="https://www.youtube.com/embed/U2Qp5pL3ovA" frameborder="0" allowfullscreen></iframe>
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Delete Review</title>
+</head>
+<body>
+    <h1>Delete Review</h1>
+    <form action="{{ url_for('delete_review') }}" method="post">
+        <label for="id">Select Review to Delete:</label><br>
+        <select id="id" name="id" required>
+            {% for review in reviews %}
+                <option value="{{ review[0] }}">{{ review[0] }} - {{ review[1] }} ({{ review[2] }})</option>
+            {% endfor %}
+        </select><br><br>
+        <input type="submit" value="Delete Review">
+    </form>
+</body>
+</html>

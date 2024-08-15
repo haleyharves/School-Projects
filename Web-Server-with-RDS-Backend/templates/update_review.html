@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Update Review</title>
+</head>
+<body>
+    <h1>Update Review</h1>
+    <form action="{{ url_for('update_review') }}" method="post">
+        <label for="id">Select Review to Update:</label><br>
+        <select id="id" name="id" onchange="this.form.submit()" required>
+            {% for review in reviews %}
+                <option value="{{ review[0] }}" {% if selected_review and selected_review[0] == review[0] %}selected{% endif %}>{{ review[0] }} - {{ review[1] }} ({{ review[2] }})</option>
+            {% endfor %}
+        </select><br><br>
+        <label for="title">Title:</label><br>
+        <input type="text" id="title" name="title" required value="{% if selected_review %}{{ selected_review[1] }}{% endif %}"><br>
+        <label for="date_watched">Date Watched:</label><br>
+        <input type="date" id="date_watched" name="date_watched" required value="{% if selected_review %}{{ selected_review[2] }}{% endif %}"><br>
+        <label for="my_rating">My Rating:</label><br>
+        <input type="number" id="my_rating" name="my_rating" required value="{% if selected_review %}{{ selected_review[3] }}{% endif %}"><br>
+        <label for="first_watch">First Watch?</label><br>
+        <select id="first_watch" name="first_watch">
+            <option value="true" {% if selected_review and selected_review[4] == "true" %}selected{% endif %}>Yes</option>
+            <option value="false" {% if selected_review and selected_review[4] == "false" %}selected{% endif %}>No</option>
+        </select><br><br>
+        <input type="submit" value="Update Review">
+    </form>
+</body>
+</html>
+

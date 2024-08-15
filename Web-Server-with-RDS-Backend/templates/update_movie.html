@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Update Movie</title>
+</head>
+<body>
+    <h1>Update Movie</h1>
+    <p>Please fill out all. areas, even ones that are already filled.</p>
+    <form action="{{ url_for('update_movie') }}" method="post">
+        <label for="id">Select Movie to Update:</label><br>
+        <select id="id" name="id" required>
+            {% for movie in movies %}
+                <option value="{{ movie[0] }}" {% if selected_movie and selected_movie[0] == movie[0] %}selected{% endif %}>{{ movie[0] }} - {{ movie[1] }} ({{ movie[2] }})</option>
+            {% endfor %}
+        </select>
+        </select><br><br>
+        <label for="title">Title:</label><br>
+        <input type="text" id="title" name="title" value="{% if selected_movie %}{{ selected_movie[1] }}{% endif %}"><br>
+        <label for=Director>Director:</label><br>
+        <input type="text" id="Director" name="Director" value="{% if selected_movie %}{{ selected_movie[2] }}{% endif %}"><br>
+        <label for="ReleaseYear">Release Year:</label><br>
+        <input type="number" id="ReleaseYear" name="ReleaseYear"value="{% if selected_movie %}{{ selected_movie[3] }}{% endif %}"><br>
+        <label for="GlobalRating">Global Rating:</label><br>
+        <input type="number" id="GlobalRating" name="GlobalRating"  value="{% if selected_movie %}{{ selected_movie[4] }}{% endif %}"><br>
+        </select><br><br>
+        <input type="submit" value="Update Movie">
+    </form>
+</body>
+</html>
+
